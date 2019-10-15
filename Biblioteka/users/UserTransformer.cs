@@ -16,6 +16,11 @@ namespace Biblioteka.users
             dto.Surname = user.Surname;
             dto.Phone = user.Phone;
             dto.Email = user.Email;
+            dto.Address = user.Address.Street + " " +
+                        user.Address.Street_number + " " +
+                        user.Address.Home_number + " " +
+                        user.Address.City + " " +
+                        user.Address.Postal_code;
             return dto;
         }
     }

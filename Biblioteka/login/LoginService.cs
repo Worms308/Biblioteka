@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Biblioteka.login
 {
@@ -40,6 +41,8 @@ namespace Biblioteka.login
             {
                 if (admin.Password.Equals(password))
                 {
+                    admin.Last_login = System.DateTime.Now;
+                    context.SaveChanges();
                     return true;
                 }
                 else
