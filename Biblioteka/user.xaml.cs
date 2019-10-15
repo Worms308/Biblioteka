@@ -48,5 +48,12 @@ namespace Biblioteka
             addUserWindow.Show();
             this.loadUsers();
         }
+
+        private void RemoveUserButton(object sender, RoutedEventArgs e)
+        {
+            UserDTO userDto = (UserDTO)userTable.SelectedCells.FirstOrDefault().Item;
+            this.userService.removeUser(userDto.Id);
+            this.loadUsers();
+        }
     }
 }

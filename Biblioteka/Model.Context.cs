@@ -16,7 +16,7 @@ namespace Biblioteka
     public partial class LibraryEntities : DbContext
     {
         public LibraryEntities()
-            : base("name=libraryEntities")
+            : base("name=LibraryEntities")
         {
         }
     

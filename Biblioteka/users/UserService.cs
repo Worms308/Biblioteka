@@ -40,11 +40,15 @@ namespace Biblioteka.users
             Address fromDB = query.FirstOrDefault();
             if (fromDB == null)
             {
-                /*                context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT [dbo].[Address] ON");
-                */
                 context.Address.Add(address);
                 context.SaveChanges();
-                return context.Address.Last();//wiem, ze to kiepski pomysl, ale w takim projekcie sie sprawdzi
+
+                var newAddress = context.Address.Where(a => a.Street == address.Street);
+                newAddress = newAddress.Where(a => a.Street_number == address.Street_number);
+                newAddress = newAddress.Where(a => a.Home_number == address.Home_number);
+                newAddress = newAddress.Where(a => a.Postal_code == address.Postal_code);
+                newAddress = newAddress.Where(a => a.City == address.City);
+                return newAddress.FirstOrDefault();
             }
             else
             {
@@ -63,7 +67,15 @@ namespace Biblioteka.users
             user.Address = getAddress(street, streetNumber, homeNumber, postalCode, city);
 
             context.User.Add(user);
-            context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT [dbo].[User] ON");
+            context.SaveChanges();
+
+            return true;
+        }
+
+        public Boolean removeUser(int id)
+        {
+            User user = context.User.Find(id);
+            context.User.Remove(user);
             context.SaveChanges();
 
             return true;

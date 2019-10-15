@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="69001ac40d8a4422a793542f888e12e1" Name="Diagram1">
-        <EntityTypeShape EntityType="libraryModel.Address" Width="1.5" PointX="8" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="libraryModel.Admin" Width="1.5" PointX="5.875" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="libraryModel.Author" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="libraryModel.Author_book" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="libraryModel.Book" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="libraryModel.Category" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="libraryModel.Loan" Width="1.5" PointX="5.875" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="libraryModel.User" Width="1.5" PointX="8" PointY="4.5" IsExpanded="true" />
+      <Diagram DiagramId="2d267133f488470cbd6f25dac51316ca" Name="Diagram1">
+        <EntityTypeShape EntityType="libraryModel.Address" Width="1.5" PointX="3.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Admin" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Author" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Author_book" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Book" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Category" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Loan" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.User" Width="1.5" PointX="6" PointY="12.875" IsExpanded="true" />
         <AssociationConnector Association="libraryModel.FK_address" ManuallyRouted="false" />
         <AssociationConnector Association="libraryModel.FK_Admin" ManuallyRouted="false" />
         <AssociationConnector Association="libraryModel.FK_Author" ManuallyRouted="false" />
