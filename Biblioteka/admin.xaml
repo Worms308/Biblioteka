@@ -10,7 +10,7 @@
 
     <StackPanel HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="650">
         <ScrollViewer Height="450">
-            <DataGrid/>
+            <DataGrid Name="adminTable" AutoGenerateColumns="True"/>
         </ScrollViewer>
     </StackPanel>
 </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteka.admins;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,25 @@ namespace Biblioteka
     /// </summary>
     public partial class admin : Page
     {
+
+        private AdminService adminService;
         public admin()
         {
             InitializeComponent();
+            adminService = new AdminService();
+            this.loadAdmins();
+        }
+
+        public void loadAdmins()
+        {
+            List<Admin> admins = adminService.loadAdmins();
+            List<AdminDTO> adminDTOs = new List<AdminDTO>();
+            foreach(Admin it in admins)
+            {
+                adminDTOs.Add(AdminTransformer.createDto(it));
+            }
+
+            adminTable.ItemsSource = adminDTOs;
         }
     }
 }

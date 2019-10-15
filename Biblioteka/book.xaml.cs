@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteka.books;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,26 @@ namespace Biblioteka
     /// </summary>
     public partial class book : Page
     {
+        private BookService bookService;
+
         public book()
         {
             InitializeComponent();
+            this.bookService = new BookService();
+            this.loadBooks();
+        }
+
+        public void loadBooks()
+        {
+            List<Book> books = bookService.loadBooks();
+            List<BookDTO> bookDTOs = new List<BookDTO>();
+
+            foreach(Book it in books)
+            {
+                bookDTOs.Add(BookTransformer.createDto(it));
+            }
+
+            bookTable.ItemsSource = bookDTOs;
         }
     }
 }

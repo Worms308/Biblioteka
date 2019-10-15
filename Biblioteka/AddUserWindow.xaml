@@ -1,0 +1,47 @@
+﻿<Window x:Class="Biblioteka.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Biblioteka"
+        mc:Ignorable="d"
+        Title="AddUserWindow" Height="450" Width="300" ResizeMode="NoResize">
+    <Grid Height="419" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Imie" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="1"/>
+        <Label Content="Telefon" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="2"/>
+        <Label Content="Email" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="3"/>
+        <Label Content="Ulica" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="4"/>
+        <Label Content="Nr ulicy" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="5"/>
+        <Label Content="Nr domu" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="6"/>
+        <Label Content="Kod pocztowy" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="7"/>
+        <Label Content="Miejscowość" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="8"/>
+
+        <TextBox Name="nameText" Grid.Column="1" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="surnameText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="phoneText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="emailText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="streetText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="streetNumText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="homeNumText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="postalCodeText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="cityText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <Button Content="Dodaj użytkownika" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center" Width="120" Height="23" Click="AddUser"/>
+    </Grid>
+</Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteka.loans;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,24 @@ namespace Biblioteka
     /// </summary>
     public partial class loan : Page
     {
+        private LoanService loanService;
         public loan()
         {
             InitializeComponent();
+            this.loanService = new LoanService();
+            this.loadLoans();
+        }
+
+        public void loadLoans()
+        {
+            List<Loan> loans = loanService.loanLoans();
+            List<LoanDTO> loanDTOs = new List<LoanDTO>();
+            foreach(Loan it in loans)
+            {
+                loanDTOs.Add(LoanTransformer.createDto(it));
+            }
+
+            loanTable.ItemsSource = loanDTOs;
         }
     }
 }

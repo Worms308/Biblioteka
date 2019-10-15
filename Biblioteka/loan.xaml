@@ -10,7 +10,7 @@
 
     <StackPanel HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="650">
         <ScrollViewer Height="350">
-            <DataGrid/>
+            <DataGrid Name="loanTable" AutoGenerateColumns="True"/>
         </ScrollViewer>
         <Grid Height="100">
             <Grid.ColumnDefinitions>

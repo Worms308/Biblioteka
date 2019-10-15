@@ -49,6 +49,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -70,12 +71,18 @@
     <Compile Include="Address.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="AddUserWindow.xaml.cs">
+      <DependentUpon>AddUserWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="admin.xaml.cs">
       <DependentUpon>admin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="admins\AdminDTO.cs" />
+    <Compile Include="admins\AdminService.cs" />
+    <Compile Include="admins\AdminTransformer.cs" />
     <Compile Include="Author.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -88,6 +95,9 @@
     <Compile Include="book.xaml.cs">
       <DependentUpon>book.xaml</DependentUpon>
     </Compile>
+    <Compile Include="books\BookDTO.cs" />
+    <Compile Include="books\BookService.cs" />
+    <Compile Include="books\BookTransformer.cs" />
     <Compile Include="Category.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -102,6 +112,9 @@
     <Compile Include="loan.xaml.cs">
       <DependentUpon>loan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="loans\LoanDTO.cs" />
+    <Compile Include="loans\LoanService.cs" />
+    <Compile Include="loans\LoanTransformer.cs" />
     <Compile Include="login.xaml.cs">
       <DependentUpon>login.xaml</DependentUpon>
     </Compile>
@@ -115,7 +128,13 @@
     <Compile Include="user.xaml.cs">
       <DependentUpon>user.xaml</DependentUpon>
     </Compile>
+    <Compile Include="users\UserDTO.cs" />
     <Compile Include="users\UserService.cs" />
+    <Compile Include="users\UserTransformer.cs" />
+    <Page Include="AddUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -212,6 +231,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
