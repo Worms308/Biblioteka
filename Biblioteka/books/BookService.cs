@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Biblioteka.users
+namespace Biblioteka.books
 {
-    class UserService
+    class BookService
     {
+
         private LibraryEntities context;
 
-        public UserService()
+        public BookService()
         {
             context = new LibraryEntities();
         }
 
-        public List<User> getAllUsers()
+        public List<Book> loadBooks()
         {
-            return context.User.ToList();
+            return context.Book.ToList();
         }
     }
 }

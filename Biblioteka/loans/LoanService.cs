@@ -4,20 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Biblioteka.users
+namespace Biblioteka.loans
 {
-    class UserService
+    class LoanService
     {
+
         private LibraryEntities context;
 
-        public UserService()
+        public LoanService()
         {
             context = new LibraryEntities();
         }
 
-        public List<User> getAllUsers()
+        public List<Loan> loanLoans()
         {
-            return context.User.ToList();
+            return context.Loan.ToList();
         }
+
     }
 }
