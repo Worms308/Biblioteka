@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69001ac40d8a4422a793542f888e12e1" Name="Diagram1">
+        <EntityTypeShape EntityType="libraryModel.Address" Width="1.5" PointX="8" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Admin" Width="1.5" PointX="5.875" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Author" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Author_book" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Book" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Category" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Loan" Width="1.5" PointX="5.875" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.User" Width="1.5" PointX="8" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="libraryModel.FK_address" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_Book_loan" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_category" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

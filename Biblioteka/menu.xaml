@@ -1,0 +1,35 @@
+﻿<Page x:Class="Biblioteka.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Biblioteka"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF7C7C7C" OpacityMask="#FF898989" Height="450" Width="800">
+        <Grid Width="800" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="500"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Content="Użytkownicy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="140" Height="40" FontSize="16" Click="SelectUser"/>
+            <Button Content="Książki" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="140" Height="40" FontSize="16" Click="SelectBook"/>
+            <Button Content="Wypożyczenia" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="140" Height="40" Click="SelectLoan" FontSize="16"/>
+            <Button Content="Administracja" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="140" Height="40" Click="SelectAdmin" FontSize="16"/>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="449" VerticalAlignment="Top" Width="649" Margin="0,0,-148,0" Grid.RowSpan="4">
+                <Frame Name="ContentFrame" NavigationUIVisibility="Hidden"/>
+            </StackPanel>
+            <Button Content="Wyloguj" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Bottom" Width="75" Margin="10,0,0,5" Click="LogoutButton"/>
+        </Grid>
+    </StackPanel>
+
+</Page>
