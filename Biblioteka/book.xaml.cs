@@ -42,5 +42,22 @@ namespace Biblioteka
 
             bookTable.ItemsSource = bookDTOs;
         }
+
+        private void AddBookButton(object sender, RoutedEventArgs e)
+        {
+            AddBookWindow addBookWindow = new AddBookWindow();
+            addBookWindow.ShowDialog();
+            this.loadBooks();
+        }
+
+        private void RemoveBookButton(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChangeBookButton(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

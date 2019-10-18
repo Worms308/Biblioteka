@@ -25,5 +25,20 @@ namespace Biblioteka.books
         {
             return context.Book.Find(id);
         }
+
+        public Boolean addBook(Book book)
+        {
+            return false;
+        }
+
+        public Boolean removeBook(Book book)
+        {
+            return false;
+        }
+
+        public Boolean changeBook(Book book)
+        {
+            return false;
+        }
     }
 }

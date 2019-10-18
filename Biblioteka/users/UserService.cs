@@ -81,10 +81,14 @@ namespace Biblioteka.users
         public Boolean removeUser(int id)
         {
             User user = context.User.Find(id);
-            context.User.Remove(user);
-            context.SaveChanges();
+            if (user.Loan.Count == 0)
+            { 
+                context.User.Remove(user);
+                context.SaveChanges();
+                return true;
+            }
 
-            return true;
+            return false;
         }
 
         public Boolean changeUser(User user)

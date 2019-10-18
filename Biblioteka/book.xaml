@@ -18,9 +18,9 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Button Content="Dodaj książkę" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140"/>
-            <Button Content="Usuń książkę" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140"/>
-            <Button Content="Zmień dane" Grid.Column="2" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140"/>
+            <Button Content="Dodaj książkę" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140" Click="AddBookButton"/>
+            <Button Content="Usuń książkę" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140" Click="RemoveBookButton"/>
+            <Button Content="Zmień dane" Grid.Column="2" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140" Click="ChangeBookButton"/>
 
         </Grid>
     </StackPanel>

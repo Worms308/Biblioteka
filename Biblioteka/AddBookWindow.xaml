@@ -1,0 +1,41 @@
+﻿<Window x:Class="Biblioteka.AddBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Biblioteka"
+        mc:Ignorable="d"
+        Title="AddBookWindow"  Height="400" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Tytuł" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14"/>
+        <Label Content="ISBN" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="1"/>
+        <Label Content="Opis" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="2"/>
+        <Label Content="Rok wydania" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="3"/>
+        <Label Content="Wydawnictwo" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="4"/>
+        <Label Content="Kategoria" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="5"/>
+        <Label Content="Autorzy" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Grid.Row="6"/>
+
+        <TextBox Name="titleText" Grid.Column="1" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="isbnText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="descriptionText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="yearText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="publishingHouseText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Name="categoryText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="5" VerticalAlignment="Center" Width="120"/>
+        <TextBox Name="authorsText" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <Button Content="Dodaj książkę" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center" Width="120" Height="23" Click="AddBookButton"/>
+    </Grid>
+</Window>
