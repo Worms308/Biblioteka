@@ -34,3 +34,5 @@ C:\Users\patrycjuszm\Biblioteka\Biblioteka\obj\Debug\AddUserWindow.g.cs
 C:\Users\patrycjuszm\Biblioteka\Biblioteka\obj\Debug\AddUserWindow.baml
 C:\Users\patrycjuszm\Biblioteka\Biblioteka\obj\Debug\ChangeUserWindow.g.cs
 C:\Users\patrycjuszm\Biblioteka\Biblioteka\obj\Debug\ChangeUserWindow.baml
+C:\Users\patrycjuszm\Biblioteka\Biblioteka\obj\Debug\NewLoan.g.cs
+C:\Users\patrycjuszm\Biblioteka\Biblioteka\obj\Debug\NewLoan.baml

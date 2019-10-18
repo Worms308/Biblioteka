@@ -25,6 +25,16 @@ namespace Biblioteka.users
             return dto;
         }
 
+        public static UserDTOLoan userDTOLoan(User user)
+        {
+            UserDTOLoan userDTOLoan = new UserDTOLoan();
+            userDTOLoan.Id = user.Id;
+            userDTOLoan.Name = user.Name;
+            userDTOLoan.Surname = user.Surname;
+
+            return userDTOLoan;
+        }
+
         public static User CreateEntity(UserDTO userDTO)
         {
             User user = context.User.Where(u => u.Id == userDTO.Id).FirstOrDefault();

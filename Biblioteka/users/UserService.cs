@@ -23,6 +23,11 @@ namespace Biblioteka.users
             return context.User.ToList();
         }
 
+        public User getUserById(int id)
+        {
+            return context.User.Find(id);
+        }
+
         private Address getAddress(string street, string streetNumber, string homeNumber, string postalCode, string city)
         {
             Address address = new Address();

@@ -24,8 +24,8 @@ namespace Biblioteka
         public MainWindow()
         {
             InitializeComponent();
-            //this.selectLogin();
-            this.selectMenu();
+            this.selectLogin();
+            //this.selectMenu();
         }
 
         public void selectLogin()

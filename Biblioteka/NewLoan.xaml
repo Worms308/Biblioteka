@@ -1,0 +1,20 @@
+﻿<Window x:Class="Biblioteka.NewLoan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Biblioteka"
+        mc:Ignorable="d"
+        Title="NewLoan" Height="450" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ListBox Width="300" MinHeight="100" Name="UserList"/>
+        <ListBox Grid.Row="1" Width="300" MinHeight="100" Name="BookList"/>
+        <Button Content="Wypożycz" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Center" Width="134" Height="40" FontSize="16" Click="AddLoanButton"/>
+
+    </Grid>
+</Window>

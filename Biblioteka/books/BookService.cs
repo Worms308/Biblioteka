@@ -20,5 +20,10 @@ namespace Biblioteka.books
         {
             return context.Book.ToList();
         }
+
+        public Book getBookById(int id)
+        {
+            return context.Book.Find(id);
+        }
     }
 }

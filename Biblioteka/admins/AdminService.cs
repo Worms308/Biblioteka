@@ -9,6 +9,7 @@ namespace Biblioteka.admins
     class AdminService
     {
         private LibraryEntities context;
+        public static Admin actualAdmin { get; set; }
 
         public AdminService()
         {
@@ -19,5 +20,7 @@ namespace Biblioteka.admins
         {
             return context.Admin.ToList();
         }
+
+        
     }
 }

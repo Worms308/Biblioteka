@@ -10,7 +10,7 @@
 
     <StackPanel HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="650">
         <ScrollViewer Height="350">
-            <DataGrid Name="bookTable" AutoGenerateColumns="True"/>
+            <DataGrid Name="bookTable" AutoGenerateColumns="True"  IsReadOnly="True"/>
         </ScrollViewer>
         <Grid Height="100">
             <Grid.ColumnDefinitions>

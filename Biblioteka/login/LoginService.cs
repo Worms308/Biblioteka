@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using Biblioteka.admins;
 
 namespace Biblioteka.login
 {
@@ -42,6 +43,7 @@ namespace Biblioteka.login
                 if (admin.Password.Equals(password))
                 {
                     admin.Last_login = System.DateTime.Now;
+                    AdminService.actualAdmin = admin;
                     context.SaveChanges();
                     return true;
                 }

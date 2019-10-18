@@ -8,6 +8,7 @@ namespace Biblioteka.books
 {
     static class BookTransformer
     {
+        private static LibraryEntities context = new LibraryEntities();
         public static BookDTO createDto(Book book)
         {
             BookDTO dto = new BookDTO();
@@ -23,9 +24,14 @@ namespace Biblioteka.books
             {
                 dto.Authors += it.Author.Name + " " + it.Author.Surname + ", ";
             }
-/*            dto.Authors.Remove(dto.Authors.Length - 3, 2);
-*/            
             return dto;
+        }
+
+        public static Book CreateEntity(BookDTO bookDTO)
+        {
+            Book book = new Book();
+            //TODO 
+            return book;
         }
     }
 }

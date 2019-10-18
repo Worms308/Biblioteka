@@ -135,6 +135,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="NewLoan.xaml.cs">
+      <DependentUpon>NewLoan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -142,6 +145,7 @@
       <DependentUpon>user.xaml</DependentUpon>
     </Compile>
     <Compile Include="users\UserDTO.cs" />
+    <Compile Include="users\UserDTOLoan.cs" />
     <Compile Include="users\UserService.cs" />
     <Compile Include="users\UserTransformer.cs" />
     <Page Include="AddUserWindow.xaml">
@@ -181,6 +185,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewLoan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

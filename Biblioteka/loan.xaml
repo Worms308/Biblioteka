@@ -10,15 +10,15 @@
 
     <StackPanel HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="650">
         <ScrollViewer Height="350">
-            <DataGrid Name="loanTable" AutoGenerateColumns="True"/>
+            <DataGrid Name="loanTable" AutoGenerateColumns="True" IsReadOnly="True"/>
         </ScrollViewer>
         <Grid Height="100">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Button Content="Wypożycz ksiązkę" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140"/>
-            <Button Content="Zwróć książkę" Grid.Column="2" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140"/>
+            <Button Content="Wypożycz ksiązkę" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140" Click="NewLoanButton"/>
+            <Button Content="Zwróć książkę" Grid.Column="2" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140" Click="ReturnLoanButton"/>
 
         </Grid>
     </StackPanel>

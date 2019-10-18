@@ -40,5 +40,22 @@ namespace Biblioteka
 
             loanTable.ItemsSource = loanDTOs;
         }
+
+        private void NewLoanButton(object sender, RoutedEventArgs e)
+        {
+            NewLoan newLoan = new NewLoan();
+            newLoan.ShowDialog();
+            this.loadLoans();
+        }
+
+        private void ReturnLoanButton(object sender, RoutedEventArgs e)
+        {
+            LoanDTO loanDTO = (LoanDTO)loanTable.SelectedItem;
+            if (loanDTO != null)
+                loanService.returnBook(loanDTO);
+            else
+                MessageBox.Show("Wybierz pozycję zwracaną!", "Zwrot ksiązki");
+            this.loadLoans();
+        }
     }
 }
