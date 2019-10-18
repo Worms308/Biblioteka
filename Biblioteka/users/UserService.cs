@@ -5,6 +5,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
+using System.Windows;
 
 namespace Biblioteka.users
 {
@@ -78,6 +79,24 @@ namespace Biblioteka.users
             context.User.Remove(user);
             context.SaveChanges();
 
+            return true;
+        }
+
+        public Boolean changeUser(User user)
+        {
+            User change = context.User.Where(u => u.Id == user.Id).FirstOrDefault();
+            change.Name = user.Name;
+            change.Surname = user.Surname;
+            change.Phone = user.Phone;
+            change.Email = user.Email;
+
+            Address address = context.Address.Where(a => a.Id == user.Address.Id).FirstOrDefault();
+            address.Street = user.Address.Street;
+            address.Street_number = user.Address.Street_number;
+            address.Home_number = user.Address.Home_number;
+            address.Postal_code = user.Address.Postal_code;
+            address.City = user.Address.City;
+            context.SaveChanges();
             return true;
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteka.users
 {
-    class UserDTO
+    public class UserDTO
     {
 
         public int Id { get; set; }

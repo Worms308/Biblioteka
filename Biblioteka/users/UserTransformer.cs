@@ -8,6 +8,7 @@ namespace Biblioteka.users
 {
     static class UserTransformer
     {
+        private static LibraryEntities context = new LibraryEntities();
         public static UserDTO CreateDto(User user) 
         {
             UserDTO dto = new UserDTO();
@@ -22,6 +23,12 @@ namespace Biblioteka.users
                         user.Address.City + " " +
                         user.Address.Postal_code;
             return dto;
+        }
+
+        public static User CreateEntity(UserDTO userDTO)
+        {
+            User user = context.User.Where(u => u.Id == userDTO.Id).FirstOrDefault();
+            return user;
         }
     }
 }

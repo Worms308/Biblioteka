@@ -10,7 +10,7 @@
 
     <StackPanel HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="650">
         <ScrollViewer Height="350">
-            <DataGrid Name="userTable" AutoGenerateColumns="True"/>
+            <DataGrid Name="userTable" AutoGenerateColumns="True" IsReadOnly="True"/>
         </ScrollViewer>
         <Grid Height="100">
             <Grid.ColumnDefinitions>
@@ -20,7 +20,7 @@
             </Grid.ColumnDefinitions>
             <Button Content="Dodaj użytkownika" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140" Click="AddUserButton"/>
             <Button Content="Usuń użytkownika" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140" Click="RemoveUserButton"/>
-            <Button Content="Zmień dane" Grid.Column="2" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140"/>
+            <Button Content="Zmień dane" Grid.Column="2" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="140" Click="ChangeUser"/>
 
         </Grid>
     </StackPanel>
